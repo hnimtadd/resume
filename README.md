@@ -11,6 +11,6 @@ Resume is automatically built from our main.tex
 - Outputs to `docs/resume.pdf`
 - Can be deployed via GitHub Pages
 
-## 📜 License
+## License
 
 MIT License - Feel free to use this template for your own resume!
