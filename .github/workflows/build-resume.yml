@@ -1,0 +1,46 @@
+name: Build LaTeX Resume
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'main.tex'
+      - '.github/workflows/build-resume.yml'
+    paths-ignore:
+      - 'docs/resume.pdf'
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: main.tex
+        args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+    - name: Create docs directory
+      run: mkdir -p docs
+
+    - name: Move PDF to docs folder
+      run: mv main.pdf docs/resume.pdf
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf
+        path: docs/resume.pdf
+
+    - name: Commit and push PDF
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add docs/resume.pdf
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update resume PDF" && git push)

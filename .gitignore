@@ -1,0 +1,32 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.xdv
+
+# PDF output (except docs/resume.pdf which we want to commit)
+/main.pdf
+*.pdf
+!docs/resume.pdf
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
