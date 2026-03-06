@@ -6,8 +6,6 @@ on:
     paths:
       - 'main.tex'
       - '.github/workflows/build-resume.yml'
-    paths-ignore:
-      - 'docs/resume.pdf'
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
