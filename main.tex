@@ -1,0 +1,239 @@
+%-------------------------
+% Resume in Latex
+% Author : Hnimtadd
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Nguyen Dinh Minh Dat} \\ \vspace{3pt}
+    \small \faEnvelope \hspace{2pt} \texttt{minhdat15012002@gmail.com} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \texttt{github.com/hnimtadd} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{linkedin.com/in/hnimtadd} \hspace{1pt} $|$
+    \hspace{1pt} \faGlobe \hspace{2pt}\texttt{www.info.craftznake.space}
+    \\ \vspace{-5pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ho Chi Minh University of Technology}{Aug. 2020 -- May 2024}
+      {Bachelor of Computer Science, GPA: 8.3/10.0 $|$ TOEIC: 870}{Ho Chi Minh City, Vietnam}
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{AWARDS \& HONORS}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://sites.google.com/grabtaxi.com/tech-infra-appreciation-board/appreciation-board/july}{\myuline{First Grab Rising Star Award}}}{July 2025}
+      {Issued by Grab}{Recognized for exceptional performance and impact}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Grab}{May 2024 -- Present}
+      {Software Engineer}{Ho Chi Minh City, Vietnam}
+      \resumeItemListStart
+        \resumeItem{Engineered production-ready API gateway on Envoy proxy handling major public-facing traffic as core Gateway operator}
+        \resumeItem{Led \textbf{zero-downtime migration} of 1,000+ services (300k QPS) from legacy to unified gateway; consolidated 20+ GrabPay gateways into single solution with standardized codebase}
+        \resumeItem{Built \textbf{multi-agent LLM chatbot} with Slack integration, reducing query resolution time via automated troubleshooting}
+        \resumeItem{Architected Gateway Self-Serve Portal with RBAC, multi-tenant support, and CI/CD pipeline for autonomous management}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Walless.io}{May 2024 -- Aug. 2024}
+      {Software Engineer}{Ho Chi Minh City, Vietnam}
+      \resumeItemListStart
+        \resumeItem{Developed personalized Web3 wallet application with streamlined user experience for cryptocurrency management}
+        \resumeItem{Architected and implemented comprehensive Profit \& Loss tracking feature for real-time portfolio analytics}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Peakee.io}{Aug. 2023 -- May 2024}
+      {Software Engineer}{Ho Chi Minh City, Vietnam}
+      \resumeItemListStart
+        \resumeItem{Built context-aware language learning platform with spaced repetition algorithms using serverless AWS Lambda backend}
+        \resumeItem{Developed cross-platform client (mobile, web, browser) from unified codebase, reducing development overhead by 60\%}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {VinAI}{June 2023 -- Oct. 2023}
+      {Software Engineer Intern}{Ho Chi Minh City, Vietnam}
+      \resumeItemListStart
+        \resumeItem{Developed video streaming platform with intelligent search using Elasticsearch and adaptive bitrate encoding server}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{RUN} $|$ \emph{Go, Wazero, Proto Actor, Docker} $|$ \href{https://github.com/hnimtadd/run}{\myuline{github.com/hnimtadd/run}}}{Feb. 2024 -- June 2025}
+          \resumeItemListStart
+            \resumeItem{Built edge computing platform with WebAssembly runtime for service deployment and lifecycle management}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{SPACED} $|$ \emph{Go, WASM, Tailwind} $|$ \href{https://github.com/hnimtadd/spaced}{\myuline{github.com/hnimtadd/spaced}}}{July 2025 -- Aug. 2025}
+          \resumeItemListStart
+            \resumeItem{Serverless flashcard app with FSRS algorithm; leveraged WASM for near-native browser performance}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+         {\textbf{TERMIO} $|$ \emph{Go, Nix} $|$ \href{https://github.com/hnimtadd/termio}{\myuline{github.com/hnimtadd/termio}}}{Apr. 2025 -- Dec. 2025}
+          \resumeItemListStart
+            \resumeItem{Terminal emulator engine with VT100/Xterm compatibility, escape sequence processing, and UTF-8 support}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Go, Python, JavaScript, SQL, Rust}\vspace{1pt} \\
+     \textbf{Technologies}     {: AWS (Lambda, EC2, S3), Docker, Kubernetes, Terraform, Envoy Proxy, WebAssembly, Git, CI/CD}\vspace{1pt} \\
+     \textbf{Databases}     {: MongoDB, PostgreSQL, MySQL, Elasticsearch}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
