@@ -157,12 +157,12 @@
 {Software Engineer}{Ho Chi Minh City, Vietnam}
 \resumeItemListStart
 \resumeItem{Engineered a production-ready API Gateway on Envoy Proxy, serving as the primary entry point for major public-facing traffic; \textbf{implemented} features including authentication, circuit breakers, and outlier detection; traffic observability pipeline.}
-\resumeItem{Core member of a massive migration for \textbf{1,000+ microservices (300k+ QPS)} from legacy to a unified gateway; developed feature parity for \textbf{20+ capabilities} supporting \textbf{3 gateway migrations} into a standardized solution.}
-\resumeItem{Investigate and optimize end-to-end client latency by \textbf{80\%} for large-payload requests by implementing advanced compression algorithms.}
-\resumeItem{Architected a \textbf{RBAC, multi-Tenant} design for gateway Console, enabling service owners to autonomously manage services.}
+\resumeItem{Core member of an \textbf{ongoing migration} of \textbf{600+ microservices} from legacy API Gateways to a unified gateway; delivered feature parity for a subset of \textbf{20+ capabilities} - including authentication, session management, and circuit-breaker compatibility - across \textbf{3 gateway migrations}.}
+\resumeItem{Root-caused a client-side latency regression during gateway migration to a missing response-compression layer, uncovering up to \textbf{17x} larger payloads on large endpoints; drove a gzip rollout validated through production performance testing.}
 \resumeItem{Engineered a Dynamic Configuration CI/CD Pipeline with automated smoke testing and configuration validation, ensuring safe deployments without service disruption; reduced global rollout time from \textbf{60 minutes to 5 minutes}.}
-\resumeItem{Architected and maintained a Disaster Recovery cluster, successfully executing \textbf{real traffic flips} to ensure business continuity during primary data center outages.}
-\resumeItem{Built an AI-driven Multi-Agent LLM Support Bot using a supervisor architecture to \textbf{automate technical troubleshooting}, significantly reducing manual query resolution time for internal developers.}
+\resumeItem{Designed and implemented \textbf{traffic-shadowing} logic for critical security filters (OAuth2, JWT, Cookie), replaying live production traffic against the new gateway to validate behavioral parity; resolved mismatches to reach \textbf{99.5\%+} shadow-matching accuracy.}
+\resumeItem{Architected and maintained a Disaster Recovery cluster, successfully executing \textbf{real traffic flips} to ensure business continuity during primary data center outages; built the automated CI/CD image-publishing and deployment tooling supporting it.}
+\resumeItem{Built an AI-driven Multi-Agent LLM Support Bot and a Slack-integrated release-automation assistant to automate technical troubleshooting and release preparation, cutting a manual multi-step process to under \textbf{2 minutes} and reducing resolution time for internal software release manager.}
 \resumeItemListEnd
 
 % \resumeSubheading
