@@ -17,6 +17,9 @@
 *.pdf
 !docs/resume.pdf
 
+# make pdf / make docker-pdf output
+/dist/
+
 # macOS
 .DS_Store
 
